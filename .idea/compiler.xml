@@ -17,7 +17,6 @@
       <module name="FolioPark" target="17" />
       <module name="FolioPark.main" target="17" />
       <module name="FolioPark.test" target="17" />
-      <module name="FolioPark_BE" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
