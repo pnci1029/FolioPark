@@ -1,3 +1,34 @@
+
+@mixin flexWithStretch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+@mixin flexColumnWithGap($gap:0){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: $gap;
+}
+
+@mixin font20default{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.6px;
+}
+
+@mixin font40default{
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+}
+
 .mainWrapper {
   display: flex;
   width: 1920px;
@@ -55,7 +86,6 @@
   }
 
 
-
   //main portfolio
   .bodyWithImageWrapper {
     width: 1920px;
@@ -105,52 +135,118 @@
   //  one text box area
   .oneTextBoxArea {
     display: flex;
-    width: 1920px;
-    padding: 75px 0 125px 0;
     flex-direction: column;
     align-items: center;
+    width: 1920px;
+    padding: 75px 0 125px 0;
     gap: 10px;
     background: linear-gradient(0deg, #4C6079 0%, #7592B5 100%);
   }
 
   .oneTextArea {
     display: flex;
-    width: 728px;
-    padding: 30px 0;
     flex-direction: column;
     align-items: center;
+    width: 728px;
+    padding: 30px 0;
     gap: 50px;
 
   }
 
   .oneTextWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: stretch;
+    @include flexWithStretch;
 
     flex: 1 0 0;
     color: var(--Color-GrayScale-G-000_bg, #F6F6F6);
     text-align: center;
 
     > .title {
+      @include font40default;
+
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 140%;
       letter-spacing: -1.2px;
     }
 
     > .body {
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      letter-spacing: -0.6px;
+      @include font20default;
+
     }
   }
 
 
+  //  image box box area
+  .imageBoxArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 1920px;
+    padding: 75px 0 125px 0;
+    background: var(--Color-Special-Sdarkblue-100, #DAE2EC);
+  }
+
+  .textArea {
+    display: flex;
+    width: 728px;
+    padding: 30px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .titleWrapper {
+    @include flexWithStretch;
+    @include font40default;
+    letter-spacing: -1.2px;
+
+    flex: 1 0 0;
+    color: var(--Color-GrayScale-G-700_bodytext, #404040);
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+    -webkit-text-stroke-color: var(--Color-GrayScale-G-000_bg, #F6F6F6);
+  }
+
+  .hashTagWrapper{
+    @include flexWithStretch;
+    gap: 15px;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  .tags{
+    display: flex;
+    padding: 5px 15px;
+    align-items: center;
+    gap: 5px;
+    border-radius: 100px;
+    border: 1px solid #344151;
+    background: var(--Color-Special-Sdarkblue-400, #4C6079);
+
+    > .tagText{
+      color: var(--Color-GrayScale-G-000_bg, #F6F6F6);
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: -0.48px;
+
+      &:before {
+        content: '# ';
+      }
+    }
+  }
+
+  .bodyWrapper {
+    @include flexWithStretch;
+    @include font20default;
+
+    flex: 1 0 0;
+    color: var(--Color-GrayScale-G-500_subtext, #6B6B6B);
+    text-align: center;
+  }
+
 }
+
+
 
