@@ -1,0 +1,107 @@
+.mainWrapper {
+  display: flex;
+  width: 1920px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--Color-GrayScale-white, #FFF);
+
+  //header
+  .headerWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 250px;
+    padding: 0 40px;
+    //background: url("../../assets/background_image.png") no-repeat center center / cover; /* 배경 이미지 추가 */
+    position: relative;
+  }
+
+  .headerTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .text {
+    color: var(--Color-GrayScale-G-700_bodytext, #404040);
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.50);
+    -webkit-text-stroke-color: var(--Color-GrayScale-white, #FFF);
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 75.6px */
+    letter-spacing: -1.62px;
+  }
+
+  .homeButtons {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 10px;
+  }
+
+  .editButton {
+    background-image: url("../../assets/edit_button.svg");
+  }
+
+  .homeButton {
+    background-image: url("../../assets/home_button.svg");
+  }
+
+
+
+
+
+  //main portfolio
+  .bodyWithImageWrapper {
+    width: 1920px;
+    height: 700px;
+    background: var(--Color-Special-Sdarkblue-100, #DAE2EC);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .mainImageWrapper {
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 200px;
+    border: 5px solid #AFC2D9;
+    background: var(--Color-GrayScale-white, #FFF);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.50);
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .profileImage {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/profile_img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .subtract {
+    width: 1920.114px;
+    height: 650px;
+    flex-shrink: 0;
+    fill: var(--Color-Special-Sdarkblue-400, #4C6079);
+    background-image: url("../../assets/subtact.svg");
+    opacity: 0.4;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+
+}
+
