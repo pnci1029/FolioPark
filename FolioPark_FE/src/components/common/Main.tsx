@@ -7,6 +7,7 @@ export function Main() {
         <>
             <div className={style.mainWrapper}>
 
+
                 {/*header*/}
                 <div className={style.headerWrapper}>
                     <div className={style.headerTitle}>
@@ -26,6 +27,24 @@ export function Main() {
                    <div className={style.subtract}>
                    </div>
                </div>
+
+            {/*  one text box area  */}
+                <div className={style.oneTextBoxArea}>
+                    <div className={style.oneTextArea}>
+                        <div className={style.oneTextWrapper}>
+                            <span className={style.title}>
+                                타이틀
+                            </span>
+                        </div>
+
+                        <div className={style.oneTextWrapper}>
+                            <span className={style.body}>
+                                바디
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </>
