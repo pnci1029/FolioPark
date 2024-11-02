@@ -19,16 +19,16 @@ export function Main() {
                     <img className={`${style.homeButtons} ${style.homeButton}`}/>
                 </div>
 
-            {/*main portfolio*/}
-               <div className={style.bodyWithImageWrapper}>
-                   <div className={style.mainImageWrapper}>
+                {/*main portfolio*/}
+                <div className={style.bodyWithImageWrapper}>
+                    <div className={style.mainImageWrapper}>
                         <img className={style.profileImage}/>
-                   </div>
-                   <div className={style.subtract}>
-                   </div>
-               </div>
+                    </div>
+                    <div className={style.subtract}>
+                    </div>
+                </div>
 
-            {/*  one text box area  */}
+                {/*  one text box area  */}
                 <div className={style.oneTextBoxArea}>
                     <div className={style.oneTextArea}>
                         <div className={style.oneTextWrapper}>
@@ -45,6 +45,28 @@ export function Main() {
                     </div>
                 </div>
 
+
+                {/*  image box box area  */}
+                <div className={style.imageBoxArea}>
+                    <div className={style.textArea}>
+                        <div className={style.titleWrapper}>
+                            이미지의 제목
+                        </div>
+                        <div className={style.hashTagWrapper}>
+                            <div className={style.tags}>
+                                <div className={style.tags}>
+                                    <span className={style.tagText}>디자인 겨여도 50%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={style.bodyWrapper}>
+                            여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
+                            여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
+                            여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </>
