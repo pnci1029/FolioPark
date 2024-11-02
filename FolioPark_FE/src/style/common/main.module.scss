@@ -180,6 +180,7 @@
     background: var(--Color-Special-Sdarkblue-100, #DAE2EC);
   }
 
+  // 텍스트 영역
   .textArea {
     @include flexColumnWithGap(50px);
 
@@ -237,6 +238,57 @@
     flex: 1 0 0;
     color: var(--Color-GrayScale-G-500_subtext, #6B6B6B);
     text-align: center;
+  }
+
+  // 이미지 영역
+  .imageArea {
+    @include flexWithStretch();
+    gap: 15px;
+
+  }
+
+  .imageFrame{
+    display: flex;
+    width: 800px;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background: var(--Color-GrayScale-white, #FFF);
+  }
+
+  .imageHandler{
+    display: flex;
+    width: 80px;
+    height: 450px;
+    padding: 0 21.5px 0 21px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 0 25px 25px 0;
+    background: var(--Color-Special-Sdarkblue-500_main, #344151);
+
+    &.right{
+      right: 0;
+    }
+
+    &.left{
+      left: 0;
+    }
+  }
+
+  .polygon{
+    width: 40.508px;
+    height: 37.5px;
+
+    &.left{
+      background-image: url("../../assets/left_polygon.svg");
+    }
+
+    &.right{
+      background-image: url("../../assets/right_polygon.svg");
+    }
   }
 
 }
