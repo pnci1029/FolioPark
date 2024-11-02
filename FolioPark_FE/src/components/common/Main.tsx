@@ -48,6 +48,7 @@ export function Main() {
 
                 {/*  image box box area  */}
                 <div className={style.imageBoxArea}>
+                    {/*텍스트 영역*/}
                     <div className={style.textArea}>
                         <div className={style.titleWrapper}>
                             이미지의 제목
@@ -64,6 +65,23 @@ export function Main() {
                             여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
                             여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
                             여기는 본문 내용이 들어갑니다. 여기는 본문 내용이 들어갑니다.
+                        </div>
+                    </div>
+
+                    {/*이미지 영역*/}
+                    <div className={style.imageArea}>
+                        <div className={style.imageFrame}/>
+                        <div className={style.imageFrame}/>
+                        <div className={style.imageFrame}/>
+                        <div className={style.imageFrame}/>
+                        <div className={style.imageFrame}/>
+
+                        <div className={`${style.imageHandler} ${style.left}`}>
+                            <div className={`${style.polygon} ${style.left}`}/>
+                        </div>
+
+                        <div className={`${style.imageHandler} ${style.right}`}>
+                            <div className={`${style.polygon} ${style.right}`}/>
                         </div>
                     </div>
                 </div>
