@@ -1,6 +1,20 @@
 import style from "../../style/common/main.module.scss"
+import {useState} from "react";
+import emptyImage from "../../assets/empty_img.svg"
+import {useImageFrameMover} from "./hooks/useImageFrameMover";
 
 export function Main() {
+
+    const { offset, moveFrames} = useImageFrameMover();
+
+    const firstImageArea =[
+        {src: emptyImage},
+        {src: emptyImage},
+        {src: emptyImage},
+        {src: emptyImage},
+        {src: emptyImage},
+    ]
+
 
 
     return (
@@ -70,17 +84,22 @@ export function Main() {
 
                     {/*이미지 영역*/}
                     <div className={style.imageArea}>
-                        <div className={style.imageFrame}/>
-                        <div className={style.imageFrame}/>
-                        <div className={style.imageFrame}/>
-                        <div className={style.imageFrame}/>
-                        <div className={style.imageFrame}/>
+                        {/* offset 상태에 따라 프레임들이 이동 */}
+                        {firstImageArea.map((data, index) => (
+                            <div
+                                key={index}
+                                className={style.imageFrame}
+                                style={{transform: `translateX(${offset}px)`}}
+                            >
+                                <img className={style.image} src={data.src}/>
+                            </div>
+                        ))}
 
-                        <div className={`${style.imageHandler} ${style.left}`}>
+                        <div className={`${style.imageHandler} ${style.left}`} onClick={() => moveFrames('left', firstImageArea.length)}>
                             <div className={`${style.polygon} ${style.left}`}/>
                         </div>
 
-                        <div className={`${style.imageHandler} ${style.right}`}>
+                        <div className={`${style.imageHandler} ${style.right}`} onClick={() => moveFrames('right', firstImageArea.length)}>
                             <div className={`${style.polygon} ${style.right}`}/>
                         </div>
                     </div>

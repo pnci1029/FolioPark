@@ -255,6 +255,18 @@
     align-items: center;
     border-radius: 25px;
     background: var(--Color-GrayScale-white, #FFF);
+
+    transition: transform 0.3s ease;
+
+    > .image{
+      width: 50px;
+      height: 50px;
+
+      //background-image: url("../../assets/empty_img.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   .imageHandler{
@@ -268,6 +280,8 @@
     position: absolute;
     border-radius: 0 25px 25px 0;
     background: var(--Color-Special-Sdarkblue-500_main, #344151);
+
+    cursor: pointer;
 
     &.right{
       right: 0;
